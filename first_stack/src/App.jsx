@@ -8,7 +8,9 @@ function App() {
 
   return (
     <>
-      <div>Empty shit</div>
+    <div className='app-container'>
+      <div className='main-banner'>TOP BANNER</div>
+    </div>
     </>
   )
 }
