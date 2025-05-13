@@ -10,8 +10,28 @@
   position: fixed;
   justify-content: center;
   align-items: center;
-  color: black;
-  background-color: aliceblue;
+  color: aliceblue;
+  opacity: 50%;
+  background: linear-gradient(black, 60%, #242424);
   width: 100%;
-  height: 50px;
+  height: 75px;
+}
+
+.banner-words {
+  cursor: pointer;
+}
+
+.login-container, .login-wrapper {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  
+}
+
+.prompt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
