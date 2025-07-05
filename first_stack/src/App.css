@@ -28,6 +28,11 @@
   
 }
 
+.name-input {
+  display: flex;
+  padding-left: 15px;
+}
+
 .prompt {
   display: flex;
   justify-content: center;
