@@ -1,3 +1,9 @@
+#Ignores Environment Variables
+*.env
+
+#Ignore Virtual Environments
+venv
+
 # Logs
 logs
 *.log
