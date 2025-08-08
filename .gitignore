@@ -2,7 +2,7 @@
 *.env
 
 #Ignore Virtual Environments
-venv
+*venv
 
 # Logs
 logs

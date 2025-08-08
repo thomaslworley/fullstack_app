@@ -1,14 +1,14 @@
-from flask import Flask
+from typing import Union
 
-app = Flask(__name__)
+from fastapi import FastAPI
 
-@app.route('/')
-def home():
-    return 'Welcome to the Home Page of the API. Please look around at the different routes'
+app = FastAPI()
 
-@app.route('/authenticate')
-def authenticate():
-    return 'Authing'
+@app.get("/")
+def read_root():
+    return 'Home'
 
-if __name__ == '__main__':
-    app.run()
+@app.get("/authenticate")
+def read_root():
+    return 'Authenticating'
+
