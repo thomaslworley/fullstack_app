@@ -2,7 +2,8 @@
 *.env
 
 #Ignore Virtual Environments
-*venv
+*venv/
+*pycache*
 
 # Logs
 logs
