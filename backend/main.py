@@ -1,14 +1,22 @@
-from flask import Flask
+import os
+from fastapi import FastAPI
+from dotenv import load_dotenv
 
-app = Flask(__name__)
+load_dotenv()
 
-@app.route('/')
-def home():
-    return 'Welcome to the Home Page of the API. Please look around at the different routes'
+ADMIN_USER=os.getenv('USERNAME')
+ADMIN_PASS=os.getenv('PASSWORD')
 
-@app.route('/authenticate')
-def authenticate():
-    return 'Authing'
+app = FastAPI()
 
-if __name__ == '__main__':
-    app.run()
+@app.get("/")
+def read_root():
+    return 'Home'
+
+@app.get("/authenticate")
+def read_root(username: str, password: str):
+    if username == ADMIN_USER and password == ADMIN_PASS:
+        return 'Authenticated!'
+    
+    return 'NOT ADMIN'
+

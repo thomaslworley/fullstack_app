@@ -1,31 +1,21 @@
 import { useState } from 'react'
+import './components/AccountLogin'
 import './App.css'
+import AccountLogin from './components/AccountLogin'
 
 function App() {
-  const [toggleLogin, setToggleLogin] = useState(false)
+  const [toggleLogin, setToggleLogin] = useState(false);
 
   const handleClick = () => {
-    setToggleLogin(!toggleLogin)
+    setToggleLogin(!toggleLogin);
   }
 
   return (
     <>
     <div className='app-container'>
       <div className='main-banner'>
-        {toggleLogin !== true ? (
-        <>
+        <AccountLogin toggleLogin={toggleLogin}/>
         <p className='banner-words' onClick={handleClick}>Login</p>
-        </> )
-        : (
-          <>
-          <div className='login-container'>
-            <div className='login-wrapper'>
-              <div className='prompt'>
-                <h5 className='input-prompt'>Enter Username: </h5><input className='name-input'></input>
-              </div>
-            </div>
-          </div>
-        </>)}
         </div>
     </div>
     </>
