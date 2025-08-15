@@ -1,4 +1,4 @@
-import os
+import os, json
 from fastapi import FastAPI
 from dotenv import load_dotenv
 
@@ -13,8 +13,8 @@ app = FastAPI()
 def read_root():
     return 'Home'
 
-@app.get("/authenticate")
-def read_root(username: str, password: str):
+@app.post("/authenticate")
+def check_admin(username: str, password: str):
     if username == ADMIN_USER and password == ADMIN_PASS:
         return 'Authenticated!'
     
