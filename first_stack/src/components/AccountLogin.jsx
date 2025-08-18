@@ -11,7 +11,9 @@ function AccountLogin ({toggleLogin}) {
         try {
             fetch('http://127.0.0.1:8000/authenticate', {
                 method: 'POST',
-                headers: {'Content-Type': 'application/json'},
+                headers: {
+                    'Access-Control-Allow-Origin': '*',
+                    'Content-Type': 'application/json'},
                 body: JSON.stringify({
                     username: username,
                     password: password
